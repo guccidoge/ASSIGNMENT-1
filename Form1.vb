@@ -9,8 +9,12 @@
         Dim item As String = "ketchup"
         Dim regularPrice As Double = 1.8
         Dim discount As Double = 0.27
-        Dim finalPrice As Double
+        Dim finalPrice, stockProfit As Double
         finalPrice = regularPrice - discount
-        Label1.Text = finalPrice.ToString("C") & " is the sale of the " & item
+        stockProfit = (finalPrice - regularPrice) / regularPrice
+
+        Label1.Text = finalPrice.ToString("C") & " is the sale of the " & item & " with a stock profit of " & stockProfit.ToString("p0")
+
+
     End Sub
 End Class
